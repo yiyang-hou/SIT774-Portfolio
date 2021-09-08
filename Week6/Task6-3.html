@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Here is the head element-->
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta name="author" content="Yiyang Hou">
+    <meta name="description" content="Bootstrap Example">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script>
+        function getGrade(score) {
+            if (score >= 97) {
+                return "A+";
+            }
+            else if (score >= 93 && score <= 96) {
+                return "A";
+            }
+            else if (score >= 90 && score <= 92) {
+                return "A-";
+            }
+            else if (score >= 87 && score <= 89) {
+                return "B+";
+            }
+            else if (score >= 83 && score <= 86) {
+                return "B";
+            }
+            else if (score >= 80 && score <= 82) {
+                return "B-";
+            }
+            else if (score >= 77 && score <= 79) {
+                return "C+";
+            }
+            else if (score >= 73 && score <= 76) {
+                return "C";
+            }
+            else if (score >= 70 && score <= 72) {
+                return "C-";
+            }
+            else if (score >= 67 && score <= 69) {
+                return "D+";
+            }
+            else if (score >= 60 && score <= 66) {
+                return "D";
+            }
+            else {
+                return "F";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>STUDENT RESULTS</h1>
+        <h2>List of Names, Scores and Grades</h2>
+        <p>Below is a table showing the student's name, score and grade:</p>
+        <p id="table"></p>
+        <script>
+            var student1 = { studentId: 995367, name: "Sid Slezak", gender: "M", score: 67, grade: getGrade(67) };
+            var student2 = { studentId: 990812, name: "Lorina Laplant", gender: "F", score: 91, grade: getGrade(91) };
+            var student3 = { studentId: 992837, name: "Nova Nale", gender: "F", score: 77, grade: getGrade(77) };
+            var student4 = { studentId: 992520, name: "Clemmie Curtsinga", gender: "F", score: 64, grade: getGrade(64) };
+            var student5 = { studentId: 997962, name: "Columbus Clender", gender: "M", score: 81, grade: getGrade(81) };
+            var student6 = { studentId: 994169, name: "Beth Baskerville", gender: "F", score: 37, grade: getGrade(37) };
+            var student7 = { studentId: 996022, name: "Glenda Gunnels", gender: "F", score: 72, grade: getGrade(72) };
+            var student8 = { studentId: 995865, name: "Lynn Lamarche", gender: "F", score: 97, grade: getGrade(97) };
+            var student9 = { studentId: 994761, name: "Bernadette Bad", gender: "F", score: 48, grade: getGrade(48) };
+            var student10 = { studentId: 992976, name: "Leon Loewen", gender: "M", score: 73, grade: getGrade(73) };
+            var students, output, listLength, i;
+            students = [student1, student2, student3, student4, student5, student6, student7, student8, student9, student10];
+            listLength = students.length;
+            output = "<table class='table'>" + "<tr><th>ID</th><th>Name</th><th>Gender</th><th>Score</th><th>Grade</th></tr>";
+            for (i = 0; i < listLength; i++) {
+                if (students[i].grade == "A+") {
+                    output += "<tr class='bg-success'>";
+                }
+                else if (students[i].grade == "F") {
+                    output += "<tr class='bg-warning'>";
+                }
+                else {
+                    output += "<tr>";
+                }
+                output += "<td>" + students[i].studentId + "</td><td>" + students[i].name + "</td><td>" + students[i].gender + "</td><td>" + students[i].score + "</td><td>" + students[i].grade + "</td></tr>";
+            }
+            output += "</table>";
+            document.getElementById("table").innerHTML = output;
+        </script>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
