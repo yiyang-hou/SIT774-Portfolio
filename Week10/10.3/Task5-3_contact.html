@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Here is the head element-->
+
+<head>
+    <title>Contact</title>
+    <meta name="author" content="Yiyang Hou">
+    <meta name="description" content="Contact">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="project.css">
+
+    <script>
+        function validation() {
+            var numbers = /^[0-9]+$/, flag;
+            flag = true;
+            if (document.getElementById("name").value.length == 0) {
+                document.getElementById("nameError").innerHTML = "<span class='text-danger'><i>You did not enter your name</i></span>";
+                flag = false;
+            }
+            else {
+                document.getElementById("nameError").innerHTML = "";
+            }
+            if (document.getElementById("email").value.length == 0) {
+                document.getElementById("emailError").innerHTML = "<span class='text-danger'><i>You did not enter your email address</i></span>";
+                flag = false;
+            }
+            else if (document.getElementById("email").value.indexOf("@") < 0) {
+                document.getElementById("emailError").innerHTML = "<span class='text-danger'><i>Your input is invalid, it does not contain @</i></span>";
+                flag = false;
+            }
+            else {
+                document.getElementById("emailError").innerHTML = "";
+            }
+
+            if (document.getElementById("phone").value.length == 0) {
+                document.getElementById("phoneError").innerHTML = "<span class='text-danger'><i>You did not enter your phone number</i></span>";
+                flag = false;
+            }
+            else if (!document.getElementById("phone").value.match(numbers)) {
+                document.getElementById("phoneError").innerHTML = "<span class='text-danger'><i>Your phone number must be an array of numbers</i></span>";
+                flag = false;
+            }
+            else if (document.getElementById("phone").value.length != 10) {
+                document.getElementById("phoneError").innerHTML = "<span class='text-danger'><i>Phone number must be exactly 10 digits</i></span>";
+                flag = false;
+            }
+            else {
+                document.getElementById("phoneError").innerHTML = "";
+            }
+            if (document.getElementById("subject").value.length == 0) {
+                document.getElementById("subjectError").innerHTML = "<span class='text-danger'><i>You must have a subject</i></span>";
+                flag = false;
+            }
+            else {
+                document.getElementById("subjectError").innerHTML = "";
+            }
+            return flag;
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-dark" href="wikiPage.html" role="button">Wiki</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-dark" href="Task5-3_about_us.html" role="button">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-dark" href="Task5-3_support.html" role="button">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-dark" href="Task5-3_contact.html" role="button">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-dark" href="Task5-3_login.html" role="button">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header part of the page within jumbotron -->
+    <div class="jumbotron" style="background-color:goldenrod">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="logo.png" alt="Logo" style="width: 80%;">
+                </div>
+                <!-- Some navigation options at the top -->
+                <div class="col-md-10 text-center font-weight-bold">
+                    <form>
+                        <!-- A search feature -->
+                        <div class="form-row container">
+                            <div class="col-md-10 col-12">
+                                <input type="text" class="form-control" name="searchbox" id="searchbox"
+                                    placeholder="Make a search here">
+                            </div>
+                            <div class="col-md-2 font-weight-bold">
+                                <input type="submit" class="form-control btn btn-dark" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr style="height: 1em;">
+            <!-- Navigation of the site -->
+            <nav class="bg-dark sticky-top">
+                <div class="row">
+                    <div class="col-md-4 font-weight-bold text-center">
+                        <a href="Task5-3_home.html" role="button" style="color: white;">HOME</a>
+                    </div>
+                    <div class="col-md-4 font-weight-bold text-center">
+                        <a href="Task5-3_product_cate1.html " role="button" style="color: white;">ANIMAL PRODUCTS</a>
+                    </div>
+                    <div class="col-md-4 font-weight-bold text-center">
+                        <a href="Task5-3_product_cate2.html" role="button" style="color: white;">VEGETABLES</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="Task5-3_home.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                </ol>
+            </nav>
+            <h2>Contact</h2>
+            <p>
+                Company contact details are placed here.<br><br><br><br><br><br><br><br><br>
+            </p>
+            <!-- Contact Form-->
+            <h3>Please fill out the form to send us a messgae:</h3>
+            <br>
+            <form onsubmit="return validation()">
+                <div class="form-group row">
+                    <label class="col-form-label col-md-3 col-4 text-right font-weight-bold" for="name">Name:</label>
+                    <div class="col-md-6 col-5">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                    </div>
+                    <span class="col-md-3 col-3" id="nameError">
+                    </span>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-md-3 col-4 text-right font-weight-bold" for="email">Email:</label>
+                    <div class="col-md-6 col-5">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email">
+                    </div>
+                    <span class="col-md-3 col-3" id="emailError">
+                    </span>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-md-3 col-4 text-right font-weight-bold" for="phone">Phone:</label>
+                    <div class="col-md-6 col-5">
+                        <input type="text" class="form-control" name="phone" id="phone"
+                            placeholder="Enter Phone Number">
+                    </div>
+                    <span class="col-md-3 col-3" id="phoneError">
+                    </span>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-md-3 col-4 text-right font-weight-bold"
+                        for="subject">Subject:</label>
+                    <div class="col-md-6 col-5">
+                        <input type="text" class="form-control" name="subject" id="subject"
+                            placeholder="Subject of the Message">
+                    </div>
+                    <span class="col-md-3 col-3" id="subjectError">
+                    </span>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-md-3 col-4 text-right font-weight-bold"
+                        for="message">Message:</label>
+                    <div class="col-md-9 col-8">
+                        <textarea class="form-control" name="message" id="message" rows="5">
+                            </textarea>
+                    </div>
+                </div>
+                <div class="form-group row col-md-9 offset-md-3 col-9 offset-3">
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                    &nbsp;
+                    <div>
+                        <input type="reset" value="Reset">
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid padding bg-dark text-center">
+            <small class="text-light"><i> This website belongs to a fictional company</i></small>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
