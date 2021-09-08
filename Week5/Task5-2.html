@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Here is the head element-->
+
+<head>
+    <title>Study Buddy Program Registeration</title>
+    <meta name="author" content="Yiyang Hou">
+    <meta name="description" content="Study Buddy Program Registeration">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1> Welcome to Study Buddy Program!</h1>
+            </div>
+        </div>
+        <h2>Please complete the following registeration to join the program</h2>
+        <form>
+            <h3>Personal Information</h3>
+            <br>
+            <div class="form-group">
+                <label class="font-weight-bold" for="studentId">Student ID:</label>
+                <input type="number" class="form-control" name="studentId" id="studentId"
+                    placeholder="Enter your Deakin student ID here" required>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Name:</label>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-3 col-12">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Title"
+                                required>
+
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <label for="title">First Name</label>
+                            <input type="text" class="form-control" name="firstName" id="firstName"
+                                placeholder="FirstName" required>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <label for="title">Surname</label>
+                            <input type="text" class="form-control" name="Surname" id="Surname" placeholder="Surname"
+                                required>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <label for="title">Preferred Name</label>
+                            <input type="text" class="form-control" name="preferredName" id="preferredName"
+                                placeholder="Preferred Name If Any">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold" for="date"> Date of Birth:</label>
+                <input type="date" class="form-control" name="date" id="date" placeholder="dd/mm/yyyy" required>
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold" for="gender">Gender</label>
+                <select name="gender" id="gender" class="form-control" required>
+                    <option>Select one...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="trans">Transgender</option>
+                    <option value="other">Other</option>
+                    <option value="notToSay">Prefer not to say</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold" for="email"> Deakin Email:</label>
+                <input type="email" class="form-control" name="email" id="email" value="username@deakin.edu.au"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold" for="mobile"> Contact Number:</label>
+                <input type="tel" class="form-control" name="mobile" id="mobile" placeholder="Moble Number" required>
+            </div>
+
+            <div class="form-group">
+                <label class="font-weight-bold">Address:</label>
+                <div class="form-group">
+                    <label for="street">Street Name and Number</label>
+                    <input type="text" class="form-control" name="street" id="street"
+                        placeholder="Street Name and Number" required>
+                    <div class="form-row">
+                        <div class="col-md-3 col-3">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" name="city" id="city" placeholder="City" required>
+                        </div>
+                        <div class="col-md-3 col-3">
+                            <label for="state">State</label>
+                            <input type="text" class="form-control" name="state" id="state" placeholder="State"
+                                required>
+                        </div>
+                        <div class="col-md-3 col-3">
+                            <label for="postcode">Postcode</label>
+                            <input type="number" class="form-control" name="postcode" id="postcode" placeholder="postcode"
+                                required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h3>Your Course and Units</h3>
+            <div class="form-group">
+                <label class="font-weight-bold" for="course">Course</label>
+                <select name="course" id="course" class="form-control" required>
+                    <option>Select one...</option>
+                    <option value="s734">S734 &nbsp;Master of Cyber Security</option>
+                    <option value="s735">S735 &nbsp;Master of Cyber Security (Prof)</option>
+                    <option value="s736">S734 &nbsp;Master of Applied AI</option>
+                    <option value="s737">S734 &nbsp;Master of Applied AI (Prof)</option>
+                    <option value="s777">S734 &nbsp;Master of Data Science</option>
+                    <option value="s778">S734 &nbsp;Master of IT</option>
+                    <option value="s779">S734 &nbsp;Master of IT (Prof)</option>
+                    <option value="s789">S734 &nbsp;Master of IT (Leadership)</option>
+                    <option value="M761">S734 &nbsp;Master of Business Analytics</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Unit(s)</label>
+                <div class="row col-11 offset-1">
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit771" id="sit771" value="sit771"
+                            >
+                        <label class="col-form-label form-check-label" for="sit771"><b>SIT771</b>&nbsp;&nbsp;Object-Oriented
+                            Development</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit772" id="sit772" value="sit772"
+                            >
+                        <label class="col-form-label form-check-label" for="sit772"><b>SIT772</b>&nbsp;&nbsp;Database and Information
+                            Retrieval</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit773" id="sit773" value="sit773"
+                            >
+                        <label class="col-form-label form-check-label" for="sit773"><b>SIT773</b>&nbsp;&nbsp;Software Requirements
+                            Analysis and Modelling</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit774" id="sit774" value="sit774"
+                            >
+                        <label class="col-form-label form-check-label" for="sit774"><b>SIT774</b>&nbsp;&nbsp;Web Technologies and
+                            Development</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit701" id="sit701" value="sit701"
+                            >
+                        <label class="col-form-label form-check-label" for="sit701"><b>SIT701</b>&nbsp;&nbsp;Enterprise Network
+                            Construction</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit702" id="sit702" value="sit702"
+                            >
+                        <label class="col-form-label form-check-label" for="sit702"><b>SIT702</b>&nbsp;&nbsp;Enterprise Network
+                            Management</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit716" id="sit716" value="sit716"
+                            >
+                        <label class="col-form-label form-check-label" for="sit716"><b>SIT716</b>&nbsp;&nbsp;Computer Networks and
+                            Security</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit718" id="sit718" value="sit718"
+                            >
+                        <label class="col-form-label form-check-label" for="sit718"><b>SIT718</b>&nbsp;&nbsp;Real World
+                            Analytics</label>
+                    </div>
+
+
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit719" id="sit719" value="sit719"
+                           >
+                        <label class="col-form-label form-check-label" for="sit719"><b>SIT719</b>&nbsp;&nbsp;Security and Privacy
+                            Issues in Analytics</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit720" id="sit720" value="sit720"
+                           >
+                        <label class="col-form-label form-check-label" for="sit720"><b>SIT720</b>&nbsp;&nbsp;Machine Learning</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit741" id="sit741" value="sit741"
+                            >
+                        <label class="col-form-label form-check-label" for="sit741"><b>SIT741</b>&nbsp;&nbsp;Statistical Data
+                            Analysis</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit742" id="sit742" value="sit742"
+                           >
+                        <label class="col-form-label form-check-label" for="sit742"><b>SIT742</b>&nbsp;&nbsp;Modern Data
+                            Science</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="mis771" id="mis771" value="mis771"
+                            >
+                        <label class="col-form-label form-check-label" for="mis771"><b>MIS771</b>&nbsp;&nbsp;Descriptive Analytics and
+                            Visualisation</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit764" id="sit764" value="sit764"
+                            >
+                        <label class="col-form-label form-check-label" for="sit764"><b>SIT764</b>&nbsp;&nbsp;Team Project (A) - Project
+                            Management and Practices</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit782" id="sit782" value="sit782"
+                            >
+                        <label class="col-form-label form-check-label" for="sit782"><b>SIT782</b>&nbsp;&nbsp;Team Project (B) -
+                            Execution and Delivery</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit787" id="sit787" value="sit787"
+                            >
+                        <label class="col-form-label form-check-label" for="sit787"><b>SIT787</b>&nbsp;&nbsp;Mathematics for Artificial
+                            Intelligence</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit790" id="sit790" value="sit790"
+                            >
+                        <label class="col-form-label form-check-label" for="sit790"><b>SIT790</b>&nbsp;&nbsp;Major Thesis</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit791" id="sit791" value="sit791"
+                            >
+                        <label class="col-form-label form-check-label" for="sit791"><b>SIT791</b>&nbsp;&nbsp;Professional
+                            Practice</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline col-md-4 col-12">
+                        <input class="form-check-input" type="checkbox" name="sit792" id="sit792" value="sit792"
+                            >
+                        <label class="col-form-label form-check-label" for="sit792"><b>SIT792</b>&nbsp;&nbsp;Minor Thesis</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <label class="font-weight-bold">Mode of Collaboration</label>
+            <div class="form-group">
+                <div class="form-group form-check form-check-inline">
+                    <input type="radio" data-toggle="collapse" data-target="#inPersonOpts" aria-expanded="false"
+                        aria-controls="inPersonOpts" name="collab" id="inPerson" required>
+                    <label class="col-form-label form-check-label" for="inpPerson">&nbsp;In Person</label>
+                </div>
+                <br>
+
+                <div class="form-group form-check form-check-inline">
+                    <input type="radio" data-toggle="collapse" data-target="#onlineOpts" aria-expanded="false"
+                        aria-controls="onlineOpts" name="collab" id="online">
+                    <label class="col-form-label form-check-label" for="online">&nbsp;Online</label>
+                </div>
+            </div>
+            <div class="collapse" id="inPersonOpts">
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="waurnPonds" id="waurnPonds" value="waurnPonds"
+                        required>
+                    <label class="col-form-label form-check-label" for="waurnPonds">Geelong - Waurn Ponds</label>
+                </div><br>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="waterfronts" id="waterfronts"
+                        value="waterfronts">
+                    <label class="col-form-label form-check-label" for="waterfronts">Geelong - Waterfronts</label>
+                </div><br>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="burwood" id="burwood" value="burwood">
+                    <label class="col-form-label form-check-label" for="burwood">Melbourne - Burwood</label>
+                </div>
+            </div>
+            <div class="collapse" id="onlineOpts">
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="zoom" id="zoom" value="zoom" required>
+                    <label class="col-form-label form-check-label" for="zoom">Online - Zoom Meeting</label>
+                </div><br>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="teams" id="teams" value="teams">
+                    <label class="col-form-label form-check-label" for="teams">Online - MS Teams</label>
+                </div><br>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="phone" id="phone" value="phone">
+                    <label class="col-form-label form-check-label" for="phone">Online - Phone Call</label>
+                </div>
+            </div>
+            <h3>Preferred Days and Time</h3>
+            <div class="form-group">
+                <label class="font-weight-bold">Days that you are available</label><br>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="mon" id="mon" value="mon">
+                    <label class="col-form-label form-check-label" for="mon">Monday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="tue" id="tue" value="tue">
+                    <label class="col-form-label form-check-label" for="tue">Tuesday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="wed" id="wed" value="wed">
+                    <label class="col-form-label form-check-label" for="wed">Wednsday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="thu" id="thu" value="thu">
+                    <label class="col-form-label form-check-label" for="thu">Thursday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="fri" id="fri" value="fri">
+                    <label class="col-form-label form-check-label" for="fri">Friday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="sat" id="sat" value="sat">
+                    <label class="col-form-label form-check-label" for="sat">Saturday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="sun" id="sun" value="sun">
+                    <label class="col-form-label form-check-label" for="sun">Sunday</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold">Days that you are not available</label><br>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="monNot" id="monNot" value="monNot">
+                    <label class="col-form-label form-check-label" for="monNot">Monday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="tueNot" id="tueNot" value="tueNot">
+                    <label class="col-form-label form-check-label" for="tueNot">Tuesday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="wedNot" id="wedNot" value="wedNot">
+                    <label class="col-form-label form-check-label" for="wedNot">Wednsday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="thuNot" id="thuNot" value="thuNot">
+                    <label class="col-form-label form-check-label" for="thuNot">Thursday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="friNot" id="friNot" value="friNot">
+                    <label class="col-form-label form-check-label" for="friNot">Friday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="satNot" id="satNot" value="satNot">
+                    <label class="col-form-label form-check-label" for="satNot">Saturday</label>
+                </div>
+                <div class="form-group form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="sunNot" id="sunNot" value="sunNot">
+                    <label class="col-form-label form-check-label" for="sunNot">Sunday</label>
+                </div>
+            </div>
+            <label class="font-weight-bold">Preferred Times</label>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-group form-check form-check-inline">
+                        <input type="radio" data-toggle="collapse" data-target="#time" aria-expanded="false"
+                            aria-controls="time" name="preferredTime" id="preferredTimeMorn" required>
+                        <label class="col-form-label form-check-label" for="preferredTimeMorn">&nbsp;Mornings</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline">
+                        <input type="radio" data-toggle="collapse" data-target="#time" aria-expanded="false"
+                            aria-controls="time" name="preferredTime" id="preferredTimeDay">
+                        <label class="col-form-label form-check-label" for="preferredTimeDay">&nbsp;During the day</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline">
+                        <input type="radio" data-toggle="collapse" data-target="#time" aria-expanded="false"
+                            aria-controls="time" name="preferredTime" id="preferredTimeEven">
+                        <label class="col-form-label form-check-label" for="preferredTimeEven">&nbsp;Evenings</label>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="time">
+                <div class="form-group">
+                    <label for="startTime">Specific start time</label>
+                    <input type="time" class="form-control" name="startTime" id="startTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="finishTime">Specific finish time</label>
+                    <input type="time" class="form-control" name="finishTime" id="finishTime" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold" for="startDate">Start Date</label><br>
+                <input type="date" class="fomr-control" name="startDate" id="startDate" required>
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold" for="comment">Note</label><br>
+                <label for="comment">Any special requirements you have, or topics you are specifically looking for help with.</label>
+                <textarea class="form-control" name="comment" id="comment" rows="5">
+                </textarea>
+            </div>
+            <div class="form-group row col-9 offset-3">
+                <div>
+                    <input type="reset" value="Reset">
+                </div>
+                &nbsp;
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

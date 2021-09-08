@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Here is the head element-->
+
+<head>
+    <title>Cookie Delivery Website</title>
+    <meta name="author" content="Yiyang Hou">
+    <meta name="description" content="Cookie Delivery Website">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Homemade Cookies Delivered to Your Door</h1>
+        <p>We deliver boxes of freshly baked cookies to your door. Please fill in the form below to place your order.
+        </p>
+        <h2>ORDER FORM</h2>
+        <form>
+            <h2>Contact Details</h2>
+            <div class="form-group row">
+                <label class="col-form-label col-md-3 col-4 text-right font-weight-bold" for="name">Your name:</label>
+                <div class="col-md-9 col-8">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Firstname Surname"
+                        required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-md-3 col-4 text-right font-weight-bold" for="phone">Phone
+                    number:</label>
+                <div class="col-md-9 col-8">
+                    <input type="tel" class="form-control" name="phone" id="phone"
+                        placeholder="Number including area code" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-md-3 col-4 text-right font-weight-bold" for="email">Email:</label>
+                <div class="col-md-9 col-8">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
+                </div>
+            </div>
+
+            <h2>Order Details</h2>
+
+            <div class="form-group row">
+                <label class="col-form-label col-md-3 col-4 text-right font-weight-bold" for="boxNumber">Number of
+                    boxes:</label>
+                <div class="col-md-9 col-8">
+                    <input type="number" class="form-control" name="boxNumber" id="boxNumber" placeholder="1" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-4 text-right font-weight-bold" for="cookieType1">Cookie Type:</label>
+                <div class="col-md-9 col-8">
+                    <div class="form-group form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cookieType" id="cookieType1"
+                            value="chocolate" required>
+                        <label class="form-check-label" for="cookieType1">Chocolate</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cookieType" id="cookieType2" value="oatmeal">
+                        <label class="form-check-label" for="cookieType2">Oatmeal</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cookieType" id="cookieType3"
+                            value="shortbread">
+                        <label class="form-check-label" for="cookieType3">Shortbread</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-4 text-right font-weight-bold" for="opExtra1">Optional Extras:</label>
+                <div class="col-md-9 col-8">
+                    <div class="form-group form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="opExtra1" id="opExtra1" value="chocChips"
+                            required>
+                        <label class="form-check-label" for="opExtra1">Choc-chips</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="opExtra2" id="opExtra2"
+                            value="icingSugar">
+                        <label class="form-check-label" for="opExtra2">Icing Sugar</label>
+                    </div>
+                    <div class="form-group form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="opExtra3" id="opExtra3" value="rasins">
+                        <label class="form-check-label" for="opExtra3">Rasins</label>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Delivery Details</h2>
+            <div class="form-group row">
+                <label class="col-form-label col-md-3 col-4 text-right font-weight-bold" for="address">Delivery
+                    Address:</label>
+                <div class="col-md-9 col-8">
+                    <input type="text" class="form-control" name="address" id="address" placeholder="Enter address here"
+                        required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-md-3 col-4 text-right font-weight-bold" for="date">Delivery
+                    Date:</label>
+                <div class="col-md-9 col-8">
+                    <input type="date" class="form-control" name="date" id="date" placeholder="dd/mm/yyyy" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-md-3 col-4 text-right font-weight-bold" for="deliveryOpt">Delivery
+                    Options:</label>
+                <div class="col-md-9 col-8">
+                    <select name="deliverOpt" id="deliverOpt" class="btn btn-info" required>
+                        <option>Select one...</option>
+                        <option value="1">Option N0.1</option>
+                        <option value="2">Option N0.2</option>
+                        <option value="3">Option N0.3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row form-check col-md-9 offset-md-3 col-9 offset-3 form-check-inline">
+
+                <input class="form-check-input" type="checkbox" name="remember" id="remember" value="remember">
+                <label class="form-check-label" for="remember">Remember me</label>
+
+            </div>
+            <div class="form-group row col-md-9 offset-md-3 col-9 offset-3">
+                <div>
+                    <input type="reset" value="Reset">
+                </div>
+                &nbsp;
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
