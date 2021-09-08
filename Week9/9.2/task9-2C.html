@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Node Express Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Feedback</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- <nav class="nav navbar-default justify-content-between">
+            <a href="5_3Home.html"><button class="btn btn-light">Home</button></a>
+            <a href="5_3Shop.html"><button class="btn btn-light">Shop</button></a>
+            <a href="5_3Contact.html"><button class="btn btn-light">Contact</button></a>
+            <a href="5_3About.html"><button class="btn btn-light">About</button></a>
+            <a href="https://www.twitch.tv/search?term=hearthstone" target="_blank"><button class="btn btn-light">Twitch</button></a>
+            <a href="https://www.blizzard.com" target="_blank"><button class="btn btn-light">Blizzard</button></a>
+            <form class="form-inline">
+                <input type="search" class="form-control mr-sm-2" id="inputSearch" name="inputSearch"
+                    placeholder="Search..">
+            </form>
+        </nav> -->
+
+
+
+    <div class="container" id="myForm">
+        <h1 class="text-center ">ONLINE SURVEY</h1>
+        <form id="surveyForm" action="/survey" method="post">
+            <div class="card my-3">
+                <div class="card-header bg-info text-white">Personal Info</div>
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            Your Name:<br>
+                            <input type="text" class="form-control" id="Firstname"
+                                name="fname" placeholder="Firstname">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <br>
+                            <input type="text" class="form-control" id="Surname"
+                                name="sname" placeholder="Surname">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-sm-3">
+                            Your Gender:<br />
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons"
+                                id="myButtonGrp">
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" autocomplete="off"
+                                        name="gender" value="Male" id="rbselector" />
+                                    Male
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" autocomplete="off"
+                                        name="gender" value="Female"
+                                        id="rbselector" /> Female
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-sm-3">
+                            Your Postocde:<br>
+                            <input type="number" class="form-control"
+                                placeholder="Postcode" name="postcode" size="4"
+                                min="0000" max="9999">
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            Your Age:<br />
+                            <input type="date" class="form-control" name="bday"
+                                id="bday" min="1900-01-01" max="2020-12-31">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-3">
+                <div class="card-header bg-info text-white">Interests</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            Your Favourite Food:<br>
+                            <select class="form-control" name="food">
+                                <option value="none" selected disabled>Select a
+                                    food..</option>
+                                <option value="Pizza">Pizza</option>
+                                <option value="Vegatables">Vegatables</option>
+                                <option value="Hamburgers">Hamburgers</option>
+                                <option value="Pasta">Pasta</option>
+                                <option value="Sushi">Sushi</option>
+                                <option value="Kebabs">Kebabs</option>
+                                <option value="Curry">Curry</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            Your Favourite Sport:<br>
+                            <select class="form-control" name="sport">
+                                <option value="none" selected disabled>Select a
+                                    sport..</option>
+                                <option value="AFL">AFL</option>
+                                <option value="Tennis">Tennis</option>
+                                <option value="Soccer">Soccer</option>
+                                <option value="Cricket">Cricket</option>
+                                <option value="Rugby">Rugby</option>
+                                <option value="Athletics">Athletics</option>
+                                <option value="Swimming">Swimming</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            Your Favourite Movie Genre:<br>
+                            <div class="btn-group btn-group-toggle d-flex flex-wrap" data-toggle="buttons"
+                                name="genre" id="myButtonGrp">
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" autocomplete="off"
+                                        name="genre" value="Action"
+                                        id="rbselector" />Action
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" autocomplete="off"
+                                        name="genre" value="Drama"
+                                        id="rbselector" />Drama
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" autocomplete="off"
+                                        name="genre" value="Horror"
+                                        id="rbselector" />Horror
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" autocomplete="off"
+                                        name="genre" value="Comedy"
+                                        id="rbselector" />Comedy
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="radio" autocomplete="off"
+                                        name="genre" value="All"
+                                        id="rbselector" />All
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            Your Interests (multiple):<br>
+                            
+                            <div class="btn-group btn-group-toggle d-flex flex-wrap" data-toggle="buttons"
+                                name="interests" id="myButtonGrp">
+                                <label class="btn btn-outline-secondary">
+                                    <input type="checkbox" autocomplete="off"
+                                        name="interests" value="Reading"
+                                        id="rbselector" />Reading
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="checkbox" autocomplete="off"
+                                        name="interests" value="Jogging"
+                                        id="rbselector" />Jogging
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="checkbox" autocomplete="off"
+                                        name="interests" value="Knitting"
+                                        id="rbselector" />Knitting
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="checkbox" autocomplete="off"
+                                        name="interests" value="Music"
+                                        id="rbselector" />Music
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="checkbox" autocomplete="off"
+                                        name="interests" value="Coding"
+                                        id="rbselector" />Coding
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="checkbox" autocomplete="off"
+                                        name="interests" value="Fishing"
+                                        id="rbselector" />Fishing
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="checkbox" autocomplete="off"
+                                        name="interests" value="Talking"
+                                        id="rbselector" />Talking
+                                </label>
+                                <label class="btn btn-outline-secondary">
+                                    <input type="checkbox" autocomplete="off"
+                                        name="interests" value="Dancing"
+                                        id="rbselector" />Dancing
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button name="SubmitForm" class="btn btn-primary" type="submit">Submit
+                Form</button>
+            <button name="ResetForm" class="btn btn-primary" type="reset">Reset
+                Form</button>
+        </form>
+    </div>
+
+    <script>
+        // Code to parse document to find button elements (checkboxes) 
+        // and force them to reset to inital value/cleared when the 'Reset'
+        // button is applied.
+        // Based on code by: hnrch02 (https://github.com/twbs/bootstrap/issues/14148)
+        $('form').each(function () {
+            var $form = $(this)
+            var $buttons = $form.find('[data-toggle="buttons"] .btn input')
+
+            $buttons.each(function () {
+                var $this = $(this)
+                $this.data('initialState', $this.prop('checked'))
+            })
+
+            $form.on('reset', function () {
+                $buttons.each(function () {
+                    var $this = $(this)
+                    var wasActive = $this.data('initialState')
+
+                    $this.prop('checked', wasActive).parent().toggleClass('active', wasActive)
+                })
+            })
+        })
+    </script>
+
+        <!-- Optional JavaScript -->
+    <!--  THE JAVASCRIPT CODE -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
