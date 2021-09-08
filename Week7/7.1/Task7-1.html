@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Here is the head element-->
+
+<head>
+    <title>String Objects</title>
+    <meta name="author" content="Yiyang Hou">
+    <meta name="description" content="String Objects">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script>
+        function typeInChar() {
+            var within, output;
+            var inputChar = prompt("Type in a CHARACTER: ");
+            if (inputChar.length == 1) {
+                within = string.indexOf(inputChar)
+                if (within >= 0) {
+                    output = "The character is within the string";
+                }
+                else {
+                    output = "The character is NOT within the string";
+                }
+            }
+            else
+            {
+                output = "Only type in 1 Charater!"
+            }
+            document.getElementById("characterDisplay").innerHTML = output;
+        }
+        function typeInString() {
+            var within, output;
+            var inputString = prompt("Type in a string: ");
+                within = string.indexOf(inputString)
+                if (within >= 0) {
+                    output = "The input string is found in the string";
+                }
+                else {
+                    output = "The input string is NOT found in the string";
+                }
+            document.getElementById("stringDisplay").innerHTML = output;
+        }
+        function modifyString(){
+            var newString;
+            newString = string.replace("fun", "the best");
+            document.getElementById("modifiedString").innerHTML = newString;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>String Objects</h1>
+        <h2>The string is: Web programming is fun!</h2>
+        <script>
+            var string = "Web programming is fun!"
+            var count = string.length;
+            document.write("<b>1. The number of characters in the string: </b><i>" + count + "</i><br>");
+            var stringLower = string.toLowerCase();
+            document.write("<b>2. The string in lowercase: </b><i>" + stringLower + "</i><br>");
+            var stringUpper = string.toUpperCase();
+            document.write("<b>3. The string in UPPERCASE: </b><i>" + stringUpper + "</i><br>");
+            var charAt = string.charAt(14);
+            document.write("<b>4. The character at position 14: </b><i>" + charAt + "</i><br>");
+            var beginPos = string.indexOf("fun");
+            document.write("<b>5. The beginning position of the substring <i>'fun'</i> in the string: </b><i>" + beginPos + "</i><br>");
+            var substring = string.substring(4, 15);
+            document.write("<b>6. Display the substring <i>'programming'</i>: </b><i>" + substring + "</i><br>");          
+        </script>
+        <span><b>7. </b></span><button class="btn btn-info" onclick="typeInChar()">Type in some Character</button>
+        <p id="characterDisplay"></p>
+        <span><b>8. </b></span><button class="btn btn-info" onclick="typeInString()">Type in some String</button>
+        <p id="stringDisplay"></p>
+        <span><b>9. </b></span><button class="btn btn-info" onclick="modifyString()">Display modified string</button><br>
+        <span><b>The new string: </b></span><p id="modifiedString"></p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

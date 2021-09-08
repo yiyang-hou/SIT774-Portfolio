@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Here is the head element-->
+
+<head>
+    <title>FORM VALIDATION</title>
+    <meta name="author" content="Yiyang Hou">
+    <meta name="description" content="FORM VALIDATION">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script>
+        function validation() {
+            var letters = /^[A-Za-z]+$/, numbers = /^[0-9]+$/;
+            if (document.getElementById("name").value.length == 0) {
+                document.getElementById("nameMessage").innerHTML = "<i>You did not enter your name</i>";
+                return false;
+            }
+            else if (document.getElementById("email").value.length == 0) {
+                document.getElementById("nameMessage").innerHTML = "";
+                document.getElementById("emailMessage").innerHTML = "<i>You did not enter your email</i>";
+                return false;
+            }
+            else if (document.getElementById("email").value.indexOf("@deakin.edu.au") < 0) {
+                document.getElementById("nameMessage").innerHTML = "";
+                document.getElementById("emailMessage").innerHTML = "<i>Must be your deakin email '@deakin.edu.au'</i>";
+                return false;
+            }
+            else if (document.getElementById("unit").value.length != 6 || !(document.getElementById("unit").value.substring(0, 2).match(letters)) || !(document.getElementById("unit").value.substring(3, 6).match(numbers)) || document.getElementById("phone").value.length != 10) {
+                if (document.getElementById("phone").value.length != 10) {
+                    document.getElementById("nameMessage").innerHTML = "";
+                    document.getElementById("emailMessage").innerHTML = "";
+                    document.getElementById("phoneMessage").innerHTML = "<i>Phone number must be exactly 10 digits</i>";
+                }
+                if (document.getElementById("unit").value.length != 6 || !(document.getElementById("unit").value.substring(0, 2).match(letters)) || !(document.getElementById("unit").value.substring(3, 6).match(numbers))) {
+                    document.getElementById("nameMessage").innerHTML = "";
+                    document.getElementById("emailMessage").innerHTML = "";
+                    document.getElementById("unitMessage").innerHTML = "<i>Unit code MUST be in format 'ABC123'</i>";
+                }
+                return false;
+            }
+            else if (!document.getElementById("phone").value.match(numbers)) {
+                var charIndex = document.getElementById("phone").value.search(/\D/);
+                var char = document.getElementById("phone").value.charAt(charIndex);
+                document.getElementById("nameMessage").innerHTML = "";
+                document.getElementById("emailMessage").innerHTML = "";
+                document.getElementById("unitMessage").innerHTML = "";
+                document.getElementById("phoneMessage").innerHTML = "<i>Contains character'" + char + "'. Numbers only!'";
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>FORM VALIDATION</h1>
+        <h2>Online Form Validation</h2>
+        <p>Please enter you details in the form below to register your interest in receiving support with a unit.</p>
+        <form onsubmit="return validation()">
+            <div class="form-group row">
+                <label class="col-form-label col-md-2 text-right font-weight-bold" for="name">Name:</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                </div>
+                <div class="col-md-6" id="nameMessage">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-md-2 text-right font-weight-bold" for="email">Email:</label>
+                <div class="col-md-4">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+                </div>
+                <div class="col-md-6" id="emailMessage">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-md-2 text-right font-weight-bold" for="unit">Deakin Unit:</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="unit" id="unit" placeholder="ABC123">
+                </div>
+                <div class="col-md-6" id="unitMessage">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-md-2 text-right font-weight-bold" for="phone">Phone:</label>
+                <div class="col-md-4">
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Must be 10 digits">
+                </div>
+                <div class="col-md-6" id="phoneMessage">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div>
+                    <input type="submit" value="Submit Query">
+                </div>
+                &nbsp;
+                <div>
+                    <input type="reset" value="Reset">
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

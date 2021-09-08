@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Here is the head element-->
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta name="author" content="Yiyang Hou">
+    <meta name="description" content="Bootstrap Example">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script>
+        function greeting() {
+            var greeting, dateObject, hour, minut, days, date, months, year, output;
+            var name = document.getElementById("name").value;
+            dateObject = new Date();
+            hour = dateObject.getDate();
+            minut = dateObject.getMinutes();
+            days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var day = days[dateObject.getDay()];
+            date = dateObject.getDate();
+            months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+            var month = months[dateObject.getMonth()];
+            year = dateObject.getFullYear();
+            if( hour < 11)
+            {
+            greeting = "Good Morning, ";
+            }
+            else if ( hour < 14 )
+            {
+                greeting = "Good Day, ";
+            }
+            else if ( hour < 18 )
+            {
+                greeting = "Good Afternoon, ";
+            }
+            else 
+            {
+                greeting = "Good Evening, ";
+            }
+            output = greeting + name + "!" + " We are " + hour +" hours and " + minut +" minutes into today, " + day + "&nbsp" + month + "&nbsp" + date +", " + year + "."
+            document.getElementById("greeting").innerHTML = output;
+
+        }
+        function highlight()
+        {
+            document.getElementById("greeting").style.backgroundColor = "yellow";
+        }
+        function reverse()
+        {
+            document.getElementById("greeting").style.backgroundColor = "";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>DYNAMIC EVENTS</h1>
+        <h2>Demonstrate a web page handling dynamic events</h2>
+        <label for="name">Please enter your name:</label>
+        <input type="text" id="name" name="name"><br>
+        <button onclick="greeting()" onmouseover="highlight()" onmouseout="reverse()">Display Greeting</button>
+        <p id="greeting"></p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

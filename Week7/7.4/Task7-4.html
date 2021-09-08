@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Here is the head element-->
+
+<head>
+    <title>Feedback</title>
+    <meta name="author" content="Yiyang Hou">
+    <meta name="description" content="Feedback">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script>
+        function updateTable() {
+            var name, rating, text, addRow;
+            name = document.getElementById("name").value;
+            rating = document.getElementById("rating").value;
+            text = document.getElementById("textarea").value;
+            addRow = "<tr><td>" + name + "</td><td>" + rating + "</td><td>" + text + "</td></tr>";
+            switch (rating) {
+                case "Very Good":
+                    $("#positiveTable").append(addRow);
+                    break;
+                case "Fair":
+                    $("#positiveTable").append(addRow);
+                    break;
+                case "Below Average":
+                    $("#negativeTable").append(addRow);
+                    break;
+                case "Very Poor":
+                    $("#negativeTable").append(addRow);
+                    break;
+                default:
+                    break;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Homemade Cookies</h1>
+            <p>your feedback is valuable to us and we aim to continuously improve the quality of our products and
+                services.</p>
+        </div>
+    </div>
+    <div class="container">
+        <h2> Feedback Form</h2>
+        <p>Please provide feedback on your experiences with our <i>Homnemade Cookies</i>.<br>
+            Include your name, comment and rating.</p>
+        <form>
+            <div class="card">
+                <div class="card-header">How was your experience with our <i>Homemade Cookies</i>?</div>
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            Name<br>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            Rating<br>
+                            <select class="form-control" name="rating" id="rating">
+                                <option value="none" selected disabled>Rating...</option>
+                                <option value="Very Good">Very Good</option>
+                                <option value="Fair">Fair</option>
+                                <option value="Below Average">Below Average</option>
+                                <option value="Very Poor">Very Poor</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        Textarea<br>
+                        <textarea class="form-control" id="textarea"
+                            name="textarea">Required example textarea</textarea>
+                    </div>
+                    <button type="button" onclick="updateTable()" class="btn btn-primary">Add Feedback</button>
+                </div>
+            </div>
+        </form>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Positive Feedback</h3>
+                        <p class="card-text">A table with positive feedback...</p>
+                        <button type="button" class="btn btn-secondary" data-toggle="modal"
+                            data-target="#positiveFeedback">
+                            Show Table of Positive Feedback
+                        </button>
+
+                        <div class="modal fade" role="dialog" id="positiveFeedback" tabindex="-1"
+                            aria-labelledby="positiveFeedbackTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title" id="positiveFeedbackTitle">Positive Feedback</h1>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>The table below contains the responses from customers who have had a
+                                            <b>positive</b> experience with our Cookies. This includes feedback rated as
+                                            <i>Very Good</i> and <i>Fair</i>.</p>
+                                        <table class="table table-bordered" id="positiveTable">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Rating</th>
+                                                <th>Feedback</th>
+                                            </tr>
+
+                                        </table>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Negative Feedback</h3>
+                        <p class="card-text">A table with negative feedback...</p>
+                        <button type="button" class="btn btn-secondary" data-toggle="modal"
+                            data-target="#negativeFeedback">
+                            Show Table of Negative Feedback
+                        </button>
+
+                        <div class="modal fade" role="dialog" id="negativeFeedback" tabindex="-1"
+                            aria-labelledby="negativeFeedbackTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title" id="negativeFeedbackTitle">Negative Feedback</h1>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>The table below contains the responses from customers who have had a
+                                            <b>negative</b> experience with our Cookies. This includes feedback rated as
+                                            <i>Below Average</i> and <i>Very Poor</i>.</p>
+                                        <table class="table table-bordered" id="negativeTable">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Rating</th>
+                                                <th>Feedback</th>
+                                            </tr>
+
+                                        </table>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+</body>
+
+</html>
