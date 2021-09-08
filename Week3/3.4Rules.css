@@ -1,0 +1,112 @@
+#wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: #d9452e;
+    color: white;
+    text-align: center;
+    background-image: url(Dakar_Rally.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 5em;
+}
+
+h1 {
+    margin-bottom: 80px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+}
+
+
+nav {
+    float: left;
+    width: 13%;
+    background-color: gold;
+    font-weight: bold;
+
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: Uppercase;
+    color: black;
+}
+
+nav a:link {
+    color: black;
+}
+
+nav a:visited {
+    color: purple;
+}
+
+nav a:hover {
+    color: darkred;
+}
+
+#back {
+    font-size: small;
+}
+
+aside {
+    float: right;
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+    width: 25%;
+    background-color: navy;
+    padding-left: 40px;
+    border: 2px solid black;
+}
+
+main {
+    width: 55%;
+    margin-left: 220px;
+    padding: 10px;
+
+}
+
+footer {
+    font-size: small;
+    font-style: italic;
+}
+
+.news {
+    width: 270px;
+    height: 180px;
+
+
+}
+
+figcaption {
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.gallery {
+    width: 270px;
+    height: 180px;
+}
+
+#route{
+    width: 600px;
+    height: 600px;
+}
